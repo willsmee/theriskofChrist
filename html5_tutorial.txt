@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<TITLE>A Java Applet </TITLE>
+</HEAD>
+<body bgcolor="#FFFFFF" text="#000000">
+<center>
+<APPLET CODE="javaeyes.class" WIDTH=160 HEIGHT=100>
+</APPLET>
+<BR>
+<font size=-1>You will need a Java capable browser to view the animation!</font><p>
+
+<h3><font color=#ff0000>"EyeBalls"</font></h3>
+<hr>
+
+</center>
+<a name=about>
+<h4><font size=+2>A</font>bout The Animation</h4>
+<dl>
+<dd><font size=+2>A</font> simple Java applet that reacts to movement of the cursor. When the cursor moves outside the square, the eyes go back to sleep. You may also poke the eyes by clicking on them.</dl>
+<dd>To view a more complex Java applet, try this <a href="pipe/index.htm">version of the game PipeDream.</a>
+</body>
+</html>
