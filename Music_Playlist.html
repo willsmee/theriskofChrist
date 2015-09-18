@@ -1,0 +1,223 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Music</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<H1><CENTER>&nbsp;</CENTER></H1>
+
+<H1><CENTER><FONT COLOR="#0000FF" SIZE=+4>The Risk of Christ </FONT></CENTER></H1>
+
+<H3><CENTER><I><FONT COLOR="#0000FF">by Will Smee</FONT></I></CENTER></H3>
+
+<H3><CENTER>&nbsp;</CENTER></H3>
+<table id=ìTable1î border=1 width=100%>
+    <TR>
+        <TD><FONT COLOR="#0000FF"><A href=Who.html target=_top><FONT COLOR="#0000FF"><CENTER>WHO WE ARE</CENTER></FONT></A></TD>
+        <TD><FONT COLOR="#0000FF"><A href=library.html target=_top><FONT COLOR="#0000FF"><CENTER>LIBRARY</CENTER></FONT></A></TD>
+        <TD><FONT COLOR="#0000FF"><A href=Contact.html target=_top><FONT COLOR="#0000FF"><CENTER>CONTACT</CENTER></FONT></A></TD>
+        <TD><FONT COLOR="#0000FF"><A href=Music.html target=_top><FONT COLOR="#0000FF"><CENTER>MUSIC</CENTER></FONT></A></TD>
+        <TD><FONT COLOR="#0000FF"><A href=Music_Playlist.html target=_top><FONT COLOR="#0000FF"><CENTER>MUSIC PLAYLIST</CENTER></FONT></A></TD>
+    </TR>
+
+</table>
+
+<H5><CENTER><br />
+    <h1>Music</h1>
+
+    <br />
+    <img src="JesusbyAndrew5.jpg" height="25%" width="25%" alt="...less of me.">
+    <br />
+    <br />
+</CENTER></H5>
+<body>
+
+<div id="cwrap">
+    <div id="nowPlay">
+        <h3 id="npAction">Paused:</h3>
+        <div id="npTitle"></div>
+    </div>
+    <div id="audiowrap">
+        <div id="audio0">
+            <audio id="audio1" controls="controls" width="300">
+                Your browser does not support the HTML5 Audio Tag.
+            </audio>
+        </div>
+        <div id="extraControls">
+            <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+        </div>
+    </div>
+    <div id="plwrap">
+        <div class="plHead">
+            <div class="plHeadNum">Track</div>
+            <div class="plHeadTitle">Title</div>
+            <div class="plHeadLength">Length</div>
+        </div>
+        <ul id="plUL">
+            <li>
+                <div class="plItem">
+                    <div class="plNum">1</div>
+                    <div class="plTitle">I Am the Door by Will Smee</div>
+                    <div class="plLength">3:08</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">2</div>
+                    <div class="plTitle">Bread of God by Will Smee</div>
+                    <div class="plLength">3:46</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">3</div>
+                    <div class="plTitle">I Love You Creator by Will Smee and Stephanie Yule</div>
+                    <div class="plLength">3:04</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">4</div>
+                    <div class="plTitle">What Would It Look Like by Will Smee</div>
+                    <div class="plLength">2:58</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">5</div>
+                    <div class="plTitle">You Are Beloved by Will Smee, with Julianne Maki</div>
+                    <div class="plLength">4:49</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">6</div>
+                    <div class="plTitle">In My Father’s House (John 14:1-4) by Will Smee</div>
+                    <div class="plLength">3:32</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">7</div>
+                    <div class="plTitle">Psalm 17 (Hear Oh Lord) by Will Smee</div>
+                    <div class="plLength">3:42</div>
+                </div>
+            </li>
+            <li>
+                <div class="plItem">
+                    <div class="plNum">8</div>
+                    <div class="plTitle">Come Unto Me (Matthew 11:28,29) by Will Smee</div>
+                    <div class="plLength">3:25</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        var supportsAudio = document.createElement('audio').canPlayType;
+        if(supportsAudio) {
+            var index = 0,
+                    playing = false;
+            mediaPath = 'Music/',
+                    extension = '',
+                    tracks = [
+                        {"track": "1", "name": "I Am the Door", "length": "03:08", "file": "IAmtheDoor1"},
+                        {"track": 2, "name": "Bread of God", "length": "03:46", "file": "BreadofGod"},
+                        {"track": 3, "name": "I Love You Creator", "length": "03:04", "file": "ILoveYouCreator"},
+                        {
+                            "track": 4,
+                            "name": "What Would it Look Like",
+                            "length": "02:58",
+                            "file": "WhatWoulditLookLikestrumm"
+                        },
+                        {"track": 5, "name": "You Are Beloved", "length": "04:49", "file": "YouAreBeloved"},
+                        {"track": 6, "name": "In My Father’s House", "length": "03:32", "file": "InMyFathersHouse"},
+                        {"track": 7, "name": "Psalm 17 (Hear Oh Lord)", "length": "03:42", "file": "Psalm17"},
+                        {"track": 8, "name": "Come Unto Me (Matthew 11:28,29)", "length": "03:25", "file": "ComeUntoMe"}
+                    ],
+                    trackCount = tracks.length,
+                    npAction = $('#npAction'),
+                    npTitle = $('#npTitle'),
+                    audio = $('#audio1').bind('play', function () {
+                        playing = true;
+                        npAction.text('Now Playing:');
+                    }).bind('pause', function () {
+                        playing = false;
+                        npAction.text('Paused:');
+                    }).bind('ended', function () {
+                        npAction.text('Paused:');
+                        if ((index + 1) < trackCount) {
+                            index++;
+                            loadTrack(index);
+                            audio.play();
+                        } else {
+                            audio.pause();
+                            index = 0;
+                            loadTrack(index);
+                        }
+                    }).get(0),
+                    btnPrev = $('#btnPrev').click(function () {
+                        if ((index - 1) > -1) {
+                            index--;
+                            loadTrack(index);
+                            if (playing) {
+                                audio.play();
+                            }
+                        } else {
+                            audio.pause();
+                            index = 0;
+                            loadTrack(index);
+                        }
+                    }),
+                    btnNext = $('#btnNext').click(function () {
+                        if ((index + 1) < trackCount) {
+                            index++;
+                            loadTrack(index);
+                            if (playing) {
+                                audio.play();
+                            }
+                        } else {
+                            audio.pause();
+                            index = 0;
+                            loadTrack(index);
+                        }
+                    }),
+                    li = $('#plUL li').click(function () {
+                        var id = parseInt($(this).index());
+                        if (id !== index) {
+                            playTrack(id);
+                        }
+                    }),
+                    loadTrack = function (id) {
+                        $('.plSel').removeClass('plSel');
+                        $('#plUL li:eq(' + id + ')').addClass('plSel');
+                        npTitle.text(tracks[id].name);
+                        index = id;
+                        audio.src = mediaPath + tracks[id].file + extension;
+                    },
+                    playTrack = function (id) {
+                        loadTrack(id);
+                        audio.play();
+                    };
+
+            if (audio.canPlayType('audio/ogg')) {
+                extension = '.ogg';
+            }
+            if (audio.canPlayType('audio/mpeg')) {
+                extension = '.mp3';
+            }
+
+            loadTrack(index);
+        }
+
+    });
+</script>
+</body>
+
+</html>
